@@ -1,0 +1,50 @@
+@import "/home/tobias/.cache/wal/colors-gtk.css";
+
+
+/* Main window */
+window {
+	background-color: rgba(30, 30, 30, 0.85);
+	border: none;
+
+}
+
+
+button {
+	background: @background;
+	border-radius: 60px;
+	margin: 8px;
+	transition: background-color 250ms ease;
+}
+
+
+button:hover {
+    	background: @color1;
+}
+
+/* falls buttons an text haben */ 
+button label {
+	color: @foreground;
+}
+
+
+button#shutdown,
+button#reboot,
+button#lock,
+button#suspend,
+button#logout,
+button#escape
+{
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: @color1;
+}
+
+/* icons für die buttons */
+#shutdown { background-image: url("/home/tobias/.config/wlogout/icons/shutdown.png"); }
+#reboot   { background-image: url("/home/tobias/.config/wlogout/icons/reboot.png"); }
+#lock     { background-image: url("/home/tobias/.config/wlogout/icons/lock.png"); }
+#suspend  { background-image: url("/home/tobias/.config/wlogout/icons/suspend.png"); }
+#logout   { background-image: url("/home/tobias/.config/wlogout/icons/logout.png"); }
+#escape   { background-image: url("/home/tobias/.config/wlogout/icons/escape.png"); }
+

@@ -1,0 +1,36 @@
+
+
+{
+	"label" : "shutdown",
+	"action" : "systemctl poweroff",
+	"keybind" : "s"
+}
+
+{
+	"label" : "reboot",
+	"action" : "systemctl reboot",
+	"keybind" : "r",
+}
+
+{
+	"label" : "suspend",
+	"action" : "systemctl suspend",
+	"keybind" : "u",
+}
+
+{
+	"label" : "lock",
+	"action" : "~/.config/hypr/scripts/lockscreen.sh",
+	"keybind" : "l",
+}
+
+{
+	"label" : "logout",
+	"action" : "hyprctl dispatch exit 0",
+	"keybind" : "e",
+}
+
+{
+	"label" : "escape",
+	"action" : "exit 0",
+}

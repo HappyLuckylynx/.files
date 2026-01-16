@@ -1,0 +1,63 @@
+@import "/home/tobias/.cache/wal/colors-gtk.css";
+
+/* zuerst alles resetten sonst gehts irendwie ned idk lol */
+* {
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 14px;
+    color: @foreground;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main 4eck */
+#outer-box {
+    background: @background;      
+    border-radius: 20px;
+	background-color: @background;
+	border: 3px solid @color1;
+    overflow: hidden; /* wenn des ned dabei komischer müll auf den ecken */
+    padding: 10px;
+}
+
+
+#inner-box {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+#input {
+    background: @color0;
+    color: @foreground;
+    border-radius: 12px;
+    padding: 6px 8px;
+    margin-bottom: 8px;
+}
+
+#entry {
+    padding: 6px 8px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+
+#entry:selected {
+    background: @color1;
+    color: @background;
+}
+
+
+#text:selected {
+    color: @background;
+}
+
+#scroll {
+    background: @background;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#image {
+    border-radius: 8px;
+}

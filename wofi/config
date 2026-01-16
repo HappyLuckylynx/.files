@@ -1,0 +1,14 @@
+show=drun
+width=30%
+height=250
+columns=1
+
+prompt=<3
+allow_images=true
+image_size=24
+
+matching=contains
+insensitive=true
+
+layer=overlay
+location=center

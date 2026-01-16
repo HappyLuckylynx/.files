@@ -1,0 +1,205 @@
+
+{
+
+
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "height": 40,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+
+
+
+	"modules-left": ["custom/padd","custom/l_end","hyprland/workspaces", "custom/r_end", "custom/l_end", "mpris", "custom/r_end","custom/padd"],
+	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","battery","pulseaudio","custom/updates","custom/r_end","custom/l_end", "custom/wifi", "custom/bluetooth", "custom/r_end", "custom/l_end","tray","custom/r_end","custom/l_end","custom/power","custom/r_end","custom/padd"],
+
+
+
+    "cpu": {
+        "interval": 10,
+        "format": "󰍛 {usage}%",
+        "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "󰾆 {percentage}%",
+        "format-alt": "󰾅 {used}GB",
+        "max-length": 30,
+        "tooltip": true,
+        "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
+    },
+
+    "temperature": {
+       "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input", //do lebt des file mit dem wert
+       "format": "{temperatureC}°C "
+    },
+
+    "clock": {
+        "format": " {:%H:%M  󰃭 %a %d}",
+        //"format-alt": "{:󰥔 %H:%M  %b %Y}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>"
+    },
+
+   
+
+        "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+
+// zeigt current window an find i aber oasch //
+     "hyprland/window": {
+        "format": "  {}", 
+        "separate-outputs": true,
+        "rewrite": {
+            "tobias@tobisLappi:(.*)": "$1 ",
+            "(.*) — Mozilla Firefox": "$1 󰈹",
+            "(.*)Mozilla Firefox": "Firefox 󰈹",
+            "(.*) - Visual Studio Code": "$1 󰨞",
+            "(.*)Visual Studio Code": "Code 󰨞",
+            "(.*) — Files": "$1 󰉋",
+            "(.*)Spotify": "Spotify 󰓇",
+            "(.*)Steam": "Steam 󰓓"
+        }
+	},
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}% ",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}",
+        "format-muted": "婢",
+        "on-click": "pavucontrol",
+        "tooltip-format": "{icon} {desc} // {volume}%",
+        "scroll-step": 1,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+
+
+    "tray": {
+      "icon-size": 20,
+        "spacing": 9
+    },
+
+    "custom/power": {
+        "format": "{}",
+        "exec": "echo ; echo  logout",
+       	"on-click": "wlogout",
+	"interval" : 86400, // idk warum owa es geht
+        "tooltip": true
+    },
+
+
+   "custom/bluetooth": {
+        "exec": "~/.config/waybar/scripts/bluetooth.sh",
+        "interval": 60,
+	"signal": 8,
+	"on-click": "~/.config/waybar/scripts/bluetooth-toggle.sh",
+	"on-click-right": "~/.config/waybar/scripts/bluetooth-menu.sh",
+	"tooltip": false
+   },
+
+  "custom/wifi": {
+    "exec": "~/.config/waybar/scripts/wifi.sh",
+    "interval": 2,
+    "tooltip": false,
+    "on-click": "nm-connection-editor"
+   },
+
+
+"mpris": {
+	"format": "{player_icon} {title} | {artist}",
+	"format-paused": "{status_icon} {title} | {artist}",
+	"title-len": 25,
+	"interval": "1",
+	"player-icons": {
+		"default": "▶",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "⏸"
+	},
+
+},
+
+// Padding Module fürs design //
+
+    "custom/l_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/r_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/sl_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/sr_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/rl_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/rr_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/padd": {
+        "format": "  ",
+        "interval" : "once",
+        "tooltip": false
+    }
+
+}
