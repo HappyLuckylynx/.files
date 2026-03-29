@@ -1,5 +1,0 @@
-# This directory is a Syncthing folder marker.
-# Do not delete.
-
-folderID: waldots
-created: 2026-02-15T14:30:24+01:00
