@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: waybardDots
+created: 2026-02-15T10:57:38+01:00

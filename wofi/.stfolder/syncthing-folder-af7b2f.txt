@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: wofidots
+created: 2026-02-15T14:28:04+01:00
