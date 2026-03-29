@@ -14,4 +14,4 @@ wal -i "$WALLPAPER" -q
 
 # Reload Waybar
 pkill -SIGUSR2 waybar
-killall swaync && swanc &
+killall swaync && swaync &
